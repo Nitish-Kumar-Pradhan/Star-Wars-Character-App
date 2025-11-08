@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import CustomDropdown from './CustomDropdown';
 
-export default function FilterBar({ onFilterChange, allCharacters = [] }) {
+export default function FilterBar({ loading, setLoading, onFilterChange, allCharacters = [] }) {
   const [filters, setFilters] = useState({
     homeworld: '',
     species: '',
@@ -11,8 +11,7 @@ export default function FilterBar({ onFilterChange, allCharacters = [] }) {
   
   const [uniqueHomeworlds, setUniqueHomeworlds] = useState([]);
   const [uniqueSpecies, setUniqueSpecies] = useState([]);
-  const [uniqueFilms, setUniqueFilms] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [uniqueFilms, setUniqueFilms] = useState([]); 
 
   useEffect(() => {
     loadFilterOptions();
@@ -108,7 +107,7 @@ export default function FilterBar({ onFilterChange, allCharacters = [] }) {
         className="mb-3 flex gap-2"
       >
         {[...Array(3)].map((_, i) => (
-          <div key={i} className="flex-1 h-16 bg-gray-100 animate-pulse rounded-lg" />
+          <div key={i} className="flex-1 h-16 bg-gray-200 animate-pulse rounded-lg" />
         ))}
       </motion.div>
     );

@@ -140,6 +140,8 @@ function AppContent() {
           <FilterBar
             onFilterChange={handleFilterChange}
             allCharacters={allCharacters}
+            loading={loading}
+            setLoading={setLoading}
           />
         </div>
 
