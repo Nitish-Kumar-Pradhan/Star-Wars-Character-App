@@ -27,10 +27,10 @@ export default function Login() {
         transition={{ type: "spring", stiffness: 400, damping: 30 }}
         className="bg-white p-6 sm:p-8 rounded-2xl   border border-gray-100 max-w-md w-full"
       >
-        <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-6 text-center tracking-tight" style={{
+        <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-6 text-center tracking-tight flex flex-col items-center" style={{
           fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif'
         }}>
-          Star Wars Characters
+          <img className='w-32 h-32' src="/ZippeeLogo.svg" alt="" />Star Wars Characters
         </h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">

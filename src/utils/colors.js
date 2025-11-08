@@ -4,21 +4,21 @@
 export function getSpeciesColor(speciesUrl) {
   // Map species to colors
   const speciesColors = {
-    'human': 'bg-blue-100 border-blue-300',
-    'droid': 'bg-gray-100 border-gray-300',
-    'wookiee': 'bg-amber-100 border-amber-300',
-    'rodian': 'bg-green-100 border-green-300',
-    'hutt': 'bg-yellow-100 border-yellow-300',
-    'yoda\'s species': 'bg-emerald-100 border-emerald-300',
-    'toydarian': 'bg-purple-100 border-purple-300',
-    'mon calamari': 'bg-cyan-100 border-cyan-300',
-    'ewok': 'bg-orange-100 border-orange-300',
-    'sullustan': 'bg-pink-100 border-pink-300',
+    'human': '#3b82f640',
+    'droid': '#6b728040',
+    'wookiee': '#d9770640',
+    'rodian': '#22c55e40',
+    'hutt': '#eab30840',
+    'yoda\'s species': '#05966940',
+    'toydarian': '#9333ea40',
+    'mon calamari': '#06b6d440',
+    'ewok': '#f9731640',
+    'sullustan': '#ec489940',
   };
   
   // Extract species name from URL (simplified - in real app would fetch species)
   // For now, return a default color or random based on URL hash
-  const defaultColor = 'bg-indigo-100 border-indigo-300';
+  const defaultColor = '#6366f140';
   
   // Use a hash of the URL to get consistent colors
   if (!speciesUrl || speciesUrl.length === 0) {
